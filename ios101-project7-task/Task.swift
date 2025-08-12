@@ -55,6 +55,11 @@ extension Task {
     static var tasksKey: String { return
         "Tasks"
     }
+    // 只用 id 判斷同一任務
+
+    static func == (lhs: Task, rhs: Task) -> Bool {
+        return lhs.id == rhs.id
+    }
 
 
     // Given an array of tasks, encodes them to data and saves to UserDefaults.
@@ -84,6 +89,14 @@ extension Task {
 
         return [] // 👈 replace with returned saved tasks
     }
+ 
+
+    // 刪除指定任務
+    static func delete(_ task: Task) {
+        var all = getTasks()
+        all.removeAll { $0.id == task.id }
+        save(all)
+    }
 
     // Add a new task or update an existing task with the current task.
     func save() {
@@ -98,4 +111,10 @@ extension Task {
     
 
     }
+    func toggledCompleteSaved() {
+        var updated = self
+        updated.isComplete.toggle()
+        updated.save()
+    }
+
 }
