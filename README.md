@@ -2,9 +2,8 @@
 
 Submitted by: Yushan Cheng
 
-**Name of your app** is an app that ... [TODO] 
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
@@ -14,7 +13,7 @@ The following **required** functionality is completed:
 - [X] Users can add tasks to the list
 - [X] Session persists when application is closed and relaunched (tasks dont get deleted when closing app) 
   - [ ] Note: You have to quit the app, not minimize it, in order to see the persistence.
-- [ ] Tasks can be deleted
+- [X] Tasks can be deleted
 - [X] Users have a calendar view via navigation controller that displays tasks	
 
 
